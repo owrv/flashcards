@@ -27,4 +27,22 @@ export default defineConfigWithVueTs(
     files: ['src/**/__tests__/*'],
   },
   skipFormatting,
+  {
+    name: 'app/custom-rules',
+    rules: {
+      // Parse errors are reported by ESLint as syntax errors; this keeps
+      // additional malformed-code detection enabled.
+      'no-unexpected-multiline': 'error',
+
+      // Unused variables
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'vue/no-unused-vars': 'error',
+
+      // Indentation
+      indent: ['error', 2, { SwitchCase: 1 }],
+      'vue/html-indent': ['error', 2],
+      'vue/script-indent': ['error', 2, { baseIndent: 1, switchCase: 1 }],
+    },
+  },
 )
