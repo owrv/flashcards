@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
+import { defineConfig, type PluginOption } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
@@ -36,7 +36,7 @@ function ensureLocalStorage() {
 }
 
 export default defineConfig(async () => {
-  const plugins = [vue()]
+  const plugins: PluginOption[] = [vue()]
 
   if (process.env.VITE_DISABLE_VUE_DEVTOOLS !== '1') {
     ensureLocalStorage()
