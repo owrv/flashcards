@@ -26,6 +26,22 @@ Siga os passos abaixo para configurar o projeto localmente:
    npm run dev
    ```
 
+## Docker
+
+Para gerar a imagem e iniciar a aplicação em contêiner:
+
+```bash
+docker compose up --build
+```
+
+Depois, acesse `http://localhost:8080`.
+
+Para abrir um shell Node usando o UID e GID do usuário local:
+
+```bash
+bash ./star.bash
+```
+
 ## Roadmap
 
 - [ ] Listar flash cards.
