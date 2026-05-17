@@ -19,7 +19,7 @@ export default defineConfigWithVueTs(
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  pluginVue.configs['flat/essential'],
+  pluginVue.configs['flat/recommended'],
   vueTsConfigs.recommended,
   
   {
@@ -40,9 +40,14 @@ export default defineConfigWithVueTs(
       'vue/no-unused-vars': 'error',
 
       // Indentation
-      indent: ['error', 2, { SwitchCase: 1 }],
-      'vue/html-indent': ['error', 2],
-      'vue/script-indent': ['error', 2, { baseIndent: 1, switchCase: 1 }],
+
     },
+    ignores: [
+      '**/dist/**',
+      '**/dist-ssr/**',
+      '**/coverage/**',
+      '**/node_modules/**',
+      '**/*.d.ts',
+    ],
   },
 )
