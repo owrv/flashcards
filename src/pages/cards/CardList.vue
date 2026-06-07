@@ -34,7 +34,7 @@ function responder(cardId: string) {
           <td>{{ card.pergunta }}</td>
           <td>{{ card.resposta }}</td>
           <td>
-            <button type="button" :id="`responder-${card.id}`" @click="responder(card.id)">
+            <button :id="`responder-${card.id}`" type="button" @click="responder(card.id)">
               Responder
             </button>
           </td>
@@ -52,7 +52,6 @@ function responder(cardId: string) {
 .card-list {
   display: grid;
   gap: 0.75rem;
-  margin-top: 1.25rem;
 }
 
 .empty-state,
